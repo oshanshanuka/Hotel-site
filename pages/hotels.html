@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/images/WhatsApp Image 2024-10-14 at 17.20.13.jpeg">
+    <style>
+        /* General Styles */
+        .container1, .container2 {
+            margin: 20px;
+        }
+        
+        .booking-form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 700px;
+            margin: auto;
+        }
+        
+        .booking-section {
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .navbar img {
+            width: 180px;
+            height: auto;
+        }
+
+        /* Grid styles for images */
+        .container2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .container2 img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 767px) {
+            .container2 {
+                grid-template-columns: 1fr;
+            }
+            
+            .navbar img {
+                width: 140px;
+                height: auto;
+            }
+
+            .container1 img {
+                width: 100%;
+                height: auto;
+            }
+
+            .container1, .container2, .booking-section {
+                padding: 10px;
+                margin: 10px;
+            }
+        }
+
+        /* Desktop Adjustments */
+        @media (min-width: 768px) {
+            .container1 img {
+                width: 1500px;
+                height: 300px;
+            }
+            
+            .container2 img {
+                width: 400px;
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/assets/images/download.png" alt="Logo">
+            </a>
+            <!-- Burger button for mobile screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/hotels.html">Hotels</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/dining.html">Dining</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br><br><br><br> <!-- Adjust for navbar height -->
+
+    <!-- Jetwing Lighthouse Section -->
+    <div class="container1">
+        <h1 class="text-center">Jetwing Lighthouse</h1>
+        <p>Jetwing Lighthouse in Galle, Sri Lanka, is a luxurious five-star hotel known for its colonial charm, stunning coastal views, and exceptional design. Here’s a closer look at what it offers:</p>
+        <img src="/assets/images/photo-gallery-desktop-large.jpg" alt="Jetwing Lighthouse Image" class="w-100 mb-3">
+        <a class="btn btn-primary mb-3" href="/pages/gallery.html" role="button">See more Jetwing Lighthouse photos</a>
+        <h4>1. Location & Architecture</h4>
+        <ul>
+            <li>Overlooks the Indian Ocean, near Galle Fort.</li>
+            <li>Designed by architect Geoffrey Bawa, blending colonial and modern aesthetics.</li>
+        </ul>
+        <h4>2. Accommodations</h4>
+        <ul>
+            <li>Elegant rooms with dark wood furnishings and sea views.</li>
+            <li>Suites like the “Bawa Room” blend colonial charm with modern amenities.</li>
+        </ul>
+        <h4>3. Dining</h4>
+        <ul>
+            <li>Cardamom Café: Serves international and local cuisine.</li>
+            <li>Anchor Bar & Grill: Seafood and casual dining by the pool.</li>
+        </ul>
+    </div>
+
+    <!-- Booking Section -->
+    <div class="booking-section">
+        <button type="button" class="btn btn-primary mb-3" id="liveAlertBtn">Put Your Reservations</button>
+        <div class="booking-form shadow-lg p-3">
+            <form class="row g-3">
+                <div class="col-md-4">
+                    <label for="hotelSelect" class="form-label">Select Hotel</label>
+                    <select id="hotelSelect" class="form-select">
+                        <option selected>Select Hotel</option>
+                        <option value="1">Jetwing Lighthouse</option>
+                        <option value="2">Jetwing Colombo</option>
+                        <option value="3">Jetwing Jaffna</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="checkIn" class="form-label">Check In</label>
+                    <input type="date" class="form-control" id="checkIn">
+                </div>
+                <div class="col-md-3">
+                    <label for="checkOut" class="form-label">Check Out</label>
+                    <input type="date" class="form-control" id="checkOut">
+                </div>
+                <div class="col-md-2">
+                    <label for="guests" class="form-label">Guests</label>
+                    <input type="number" class="form-control" id="guests" min="1" value="1">
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary w-100">Check Availability</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Jetwing Colombo Section -->
+    <div class="container1">
+        <h1 class="text-center">Jetwing Colombo</h1>
+        <p>Jetwing Colombo in Colombo 07, Sri Lanka, offers a blend of colonial charm and modern luxury with stunning city and coastal views.</p>
+    </div>
+    <div class="container2">
+        <img src="/assets/images/DSC_2325-Edit-1200x810-300x203.jpg" alt="Colombo Image 1">
+        <img src="/assets/images/DSC_2325-Edit-1200x810-300x203.jpg" alt="Colombo Image 2">
+        <a class="btn btn-primary mt-3 mb-3 d-block text-center" href="/pages/gallery.html" role="button">See more Jetwing Colombo photos</a>
+    </div>
+
+    
+
+    <footer class="footer mt-5 pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/assets/images/download.png" alt="Jetwing Hotels Logo" class="mb-3">
+                    <form class="subscribe-form mb-3">
+                        <label for="email">Subscribe to Latest Offers</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                    </form>
+                    <p><strong>Jetwing Hotels Limited</strong><br>
+                        Jetwing House II, 46/26, Navam Mawatha, Colombo 02, Sri Lanka</p>
+                    <p>Telephone: +94 11 234 5700<br>
+                        Reservations: +94 11 470 9400<br>
+                        WhatsApp: +94 11 470 9400<br>
+                        Email: <a href="mailto:reservations@jetwinghotels.com">reservations@jetwinghotels.com</a></p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p>All Copyrights Reserved © Jetwing Hotels</p>
+                    <p>Concept & Design by <a href="#">Oshan Shanuka</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS for toggling navbar -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-whneR2O2TEe6QTLZkPbGJ82klzqxJJ62cG6ULeDhhD9A+Y63E+WjJdA7OqXdMXXF" crossorigin="anonymous"></script>
+</body>
+</html>

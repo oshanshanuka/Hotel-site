@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/images/WhatsApp Image 2024-10-14 at 17.20.13.jpeg">
+  <style>
+    /* Fullscreen background image */
+    .hero {
+        position: relative;
+        background-image: url('your-image-url.jpg'); /* Replace with your image path */
+        background-size: cover;
+        background-position: center;
+        height: 100vh; /* Full screen height */
+    }
+
+    /* Overlay text positioning */
+    .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+    }
+
+    /* Styling for the booking form at the bottom */
+    .booking-form {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding-top: 20px;
+        border-radius: 10px;
+        max-width: 700px;
+        margin: auto;
+    }
+
+    /* Footer booking section positioning */
+    .booking-section {
+        padding-bottom: 100px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-section {
+        background-color: #333;
+        color: #fff;
+        padding: 40px 20px;
+        height: 70vh;
+    }
+
+    .info-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .info-section h1 span {
+        color: #e2c14e;
+    }
+
+    .info-section .stats {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 20px;
+    }
+
+    .stat-item {
+        background-color: #666;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .stat-item p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .info-section p {
+        margin-bottom: 20px;
+    }
+
+    .faq-link {
+        color: #e2c14e;
+        text-decoration: underline;
+    }
+
+    .map-section {
+        padding: 40px 20px;
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .map-image {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    .gallery-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .main-heading {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 2.5rem;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+    }
+
+    .main-heading::before {
+        content: '';
+        display: block;
+        height: 5px;
+        width: 100px;
+        background-color: #f8b400;
+        margin: 10px auto;
+    }
+
+    .subheading {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 1.25rem;
+        color: #666;
+    }
+
+    .icons-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .icon-item {
+        text-align: center;
+        width: 150px;
+    }
+
+    .icon-item img {
+        width: 60px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .icon-item p {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .explore-btn {
+        display: block;
+        text-align: center;
+        margin: 40px auto;
+    }
+
+    .explore-btn button {
+        padding: 10px 40px;
+        background-color: #f8b400;
+        border: none;
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .explore-btn button:hover {
+        background-color: #d79500;
+    }
+
+    .illustration-section {
+        margin: 50px 0;
+        text-align: center;
+    }
+
+    .illustration-section img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Footer Styling */
+    .footer {
+       background-color: #f8f9fa;
+       padding-top: 40px;
+       padding-bottom: 20px;
+       border-top: 2px solid #dee2e6;
+    }
+
+    .footer .list-unstyled li {
+      margin-bottom: 10px;
+    }
+
+    .footer .list-unstyled li a {
+      color: #333;
+    }
+
+    .footer img {
+      max-width: 200px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+        .info-section,
+        .map-section {
+            height: auto;
+            padding: 20px;
+        }
+
+        .gallery-card {
+            grid-template-columns: 1fr;
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .carousel-inner img {
+            height: auto;
+        }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar with Burger Menu -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+          <img src="/assets/images/download.png" alt="Logo" style="width: 240px; height: 50px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/pages/hotels.html">Hotels</a></li>
+              <li class="nav-item"><a class="nav-link" href="/pages/dining.html">Dining</a></li>
+              <li class="nav-item"><a class="nav-link" href="/pages/gallery.html">Gallery</a></li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="active" aria-current="true" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/assets/images/jetwing-jaffna-01.jpg" class="d-block w-100" alt="..." width="100vw" height="630px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Spend peace Here</h5>
+          <p>We giving memorable Treatment to our customers</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/jetwing-jaffna-03.jpg" class="d-block w-100" alt="..." width="100vw" height="600px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Spend peace Here</h5>
+          <p>We giving memorable Treatment to our customers.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/jetwing-jaffna-06.jpg" class="d-block w-100" alt="..." width="100vw" height="600px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Spend peace Here</h5>
+          <p>We giving memorable Treatment to our customers.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/Jetwing-Lake.jpg" class="d-block w-100" alt="..." width="100vw" height="600px">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Spend peace Here</h5>
+          <p>We giving memorable Treatment to our customers.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+    <!-- Booking Form Section -->
+    <div class="booking-section">
+        <div class="booking-form shadow-lg p-3">
+            <form class="row g-3">
+                <div class="col-md-4">
+                    <label for="hotelSelect" class="form-label">Select Hotel</label>
+                    <select id="hotelSelect" class="form-select">
+                        <option selected>Select Hotel</option>
+                        <option value="1">Hotel 1</option>
+                        <option value="2">Hotel 2</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="checkIn" class="form-label">Check In</label>
+                    <input type="date" class="form-control" id="checkIn">
+                </div>
+                <div class="col-md-3">
+                    <label for="checkOut" class="form-label">Check Out</label>
+                    <input type="date" class="form-control" id="checkOut">
+                </div>
+                <div class="col-md-2">
+                    <label for="guests" class="form-label">Guests</label>
+                    <input type="number" class="form-control" id="guests" min="1" value="1">
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary w-100">Check Availability</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+  <!-- Left Info Section -->
+   <div class="content-wrapper">
+  <div class="info-section col-lg-6">
+      <h1>MAKE YOURSELF <br><span>AT HOME</span></h1>
+      <div class="stats">
+          <div class="stat-item">
+              <h2>16</h2>
+              <p>DESTINATIONS</p>
+          </div>
+          <div class="stat-item">
+              <h2>30</h2>
+              <p>LUXURY PROPERTIES</p>
+          </div>
+      </div>
+      <p>We are a small island with big hearts. Wherever you may find yourself in Sri Lanka, rest easy knowing that an open door is never too far away.</p>
+      <a href="#" class="faq-link">Frequently Asked Questions ></a>
+  </div>
+
+  <!-- Right Map Section -->
+  <div class="map-section col-lg-6">
+      <img src="/assets/images/jetwinghotels-map-desktop-v2.jpg" alt="Map of Sri Lanka" class="map-image">
+  </div>
+</div>
+
+<div class="gallery-card">
+    <div class="card" style="width: 20rem;">
+        <img src="/assets/images/jetwing-jaffna-03.jpg" class="card-img-top" alt="jetwing" style="width: 100%; height: 100%;">
+        <div class="card-body">
+          <h5 class="card-title">Jetwing Jaffna</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="/pages/gallery.html" class="btn btn-primary">See more</a>
+        </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+      <img src="/assets/images/Gallery-h1-4-300x200.jpg" class="card-img-top" alt="jetwing" style="width: 100%; height: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">Jetwing Colombo</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="/pages/gallery.html" class="btn btn-primary">See more</a>
+      </div>
+  </div><div class="card" style="width: 20rem;">
+    <img src="/assets/images/Hotel-Gallery-900x607-1-1-300x202.jpg" class="card-img-top" alt="jetwing" style="width: 100%; height: 100%;">
+    <div class="card-body">
+      <h5 class="card-title">Jetwing LightHouse</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="/pages/gallery.html" class="btn btn-primary">See more</a>
+    </div>
+</div>
+</div>
+
+ <!-- Main Heading -->
+<section class="heading-section">
+  <h1 class="main-heading">SUSTAINABLE TOURISM IS AT OUR CORE</h1>
+  <p class="subheading">A responsible harmony of community and environment</p>
+</section>
+
+<!-- Icons Grid Section -->
+<section class="icons-grid">
+  <div class="icon-item">
+      <img src="/assets/images/illustration concept design template,lightbulb,thinking,solution,leaf,electricity,saver,design,innovative,eco,creative,logo,brain,smart,concept,vector,green,nature,modern,bulb,energy,idea,tech,ecology,organic,illustra.jpg" alt="Energy and Carbon" style="width: 100px; height: 100px;">
+      <p>Energy and Carbon</p>
+  </div>
+  <div class="icon-item">
+      <img src="/assets/images/🌿 Exciting News! 🌿 JP Carpet Cleaning is taking….jpg" alt="Water and Waste" style="width: 100px; height: 100px;">
+      <p>Water and Waste</p>
+  </div>
+  <div class="icon-item">
+      <img src="/assets/images/Aemetis_ A Renewable Biofuels Company At A Reasonable Price (NASDAQ_AMTX).jpg" alt="Biodiversity" style="width: 100px; height: 100px;">
+      <p>Biodiversity</p>
+  </div>
+  <div class="icon-item">
+      <img src="/assets/images/Download Eco Green Technology Icon Set for free.jpg" alt="Community and Culture" style="width: 100px; height: 100px;">
+      <p>Community and Culture</p>
+  </div>
+  <div class="icon-item">
+      <img src="/assets/images/52b7b43b-b574-4da3-85b0-75ab2010007c.jpg" alt="Family" style="width: 100px; height: 100px;">
+      <p>Family</p>
+  </div>
+  <div class="icon-item">
+      <img src="/assets/images/Download green herbal logo template herbal 100 for free.jpg" alt="Sourcing and Production" style="width: 100px; height: 100px;">
+      <p>Sourcing and Production</p>
+  </div>
+</section>
+
+<!-- Explore Button -->
+<section class="explore-btn">
+  <button>EXPLORE</button>
+</section>
+
+<!-- Illustration Section -->
+<section class="illustration-section">
+  <img src="/assets/images/responsible-tourism-2.jpg" alt="Architectural Illustration">
+</section>
+ <!-- Footer Section -->
+ <footer class="footer mt-5 pt-5">
+  <div class="container">
+    <div class="row">
+      <!-- Left Column -->
+      <div class="col-md-6">
+        <img src="/assets/images/download.png" alt="Jetwing Hotels Logo" class="mb-3">
+        <form class="subscribe-form mb-3">
+          <label for="email">Subscribe to Latest Offers</label>
+          <input type="email" id="email" class="form-control" placeholder="Enter your email">
+          <button type="submit" class="btn btn-primary mt-2">Submit</button>
+        </form>
+        <p><strong>Jetwing Hotels Limited</strong><br>
+          Jetwing House II, 46/26, Navam Mawatha, Colombo 02, Sri Lanka</p>
+        <p>Telephone: +94 11 234 5700<br>
+          Reservations: +94 11 470 9400<br>
+          WhatsApp: +94 11 470 9400<br>
+          Email: <a href="mailto:reservations@jetwinghotels.com">reservations@jetwinghotels.com</a></p>
+      </div>
+      
+      <!-- Right Column -->
+      <div class="col-md-6">
+        <ul class="list-unstyled">
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+        <div class="social-media">
+          <a class="me-3" href="https://web.facebook.com/jetwinghotels/?_rdc=1&_rdr">
+            <img src="/assets/images/facebook.jpg" alt="" width="75px" height="75px">
+          </a>
+          <a class="me-3" href="https://www.youtube.com/user/jetwinghotels">
+            <img src="/assets/images/YouTube App Icon.jpg" alt="" width="75px" height="75px">
+          </a>
+          <a class="me-3" href="https://www.instagram.com/jetwinghotels/?ref=badge">
+            <img src="/assets/images/Instagram App Icon.jpg" alt="" width="75px" height="75px">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col text-center">
+        <p>All Copyrights Reserved © Jetwing Hotels</p>
+        <p>Concept & Design by <a href="#">Oshan shanuka</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

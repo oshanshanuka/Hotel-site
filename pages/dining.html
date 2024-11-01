@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dining</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/images/WhatsApp Image 2024-10-14 at 17.20.13.jpeg">
+    <style>
+        /* General styling for page layout */
+        .content-container {
+            padding: 20px;
+            margin-top: 60px; /* Space for fixed navbar */
+        }
+
+        /* Responsive dining gallery */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Navbar image size */
+        .navbar img {
+            width: 180px;
+            height: auto;
+        }
+
+        /* Adjustments for smaller screens */
+        @media (max-width: 767px) {
+            .navbar img {
+                width: 140px;
+                height: auto;
+            }
+
+            .content-container {
+                padding: 10px;
+                margin-top: 80px; /* Increased space for navbar */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar with burger button for responsive collapse -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/assets/images/download.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/hotels.html">Hotels</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/pages/dining.html">Dining</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/pages/gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content for Dining -->
+    <div class="content-container">
+        <h1 class="text-center">Dining at Jetwing Hotels</h1>
+        <p class="text-center">Discover exceptional culinary experiences across our dining venues at Jetwing Hotels, each offering unique flavors, fresh ingredients, and unforgettable settings.</p>
+
+        <!-- Dining Options Description -->
+        <h3>Dining Venues</h3>
+        <ul>
+            <li><strong>Cardamom Café:</strong> An all-day dining venue that serves an array of international and Sri Lankan cuisine, offering both buffet and à la carte options.</li>
+            <li><strong>Anchor Bar & Grill:</strong> Located by the pool, this casual venue specializes in seafood, light snacks, and refreshing cocktails for a relaxed dining experience.</li>
+            <li><strong>The Verandah:</strong> A fine dining experience with breathtaking views, focusing on traditional Sri Lankan flavors with a modern twist.</li>
+            <li><strong>In-Room Dining:</strong> Enjoy gourmet meals in the privacy of your own room with our extensive in-room dining menu, available 24/7.</li>
+        </ul>
+
+        <!-- Dining Photos Gallery -->
+        <h3>Dining Gallery</h3>
+        <div class="gallery-container">
+            <img src="/assets/images/DSC_3395-1200x1620-222x300.jpg" alt="Dining area at Cardamom Café">
+            <img src="/assets/images/Gallery1-3-300x200.jpg" alt="Outdoor dining at Anchor Bar & Grill">
+            <img src="/assets/images/Gallery-d-3-300x200.jpg" alt="Fine dining at The Verandah">
+            <img src="/assets/images/Gallery4-1-201x300.jpg" alt="In-room dining setup with gourmet meals">
+            <img src="/assets/images/jjf-gallery19.jpg" alt="Buffet spread at Cardamom Café">
+            <img src="/assets/images/sri-lanka-dining-desktop-large.jpg" alt="Cocktails by the pool at Anchor Bar & Grill">
+        </div>
+    </div>
+    <footer class="footer mt-5 pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/assets/images/download.png" alt="Jetwing Hotels Logo" class="mb-3">
+                    <form class="subscribe-form mb-3">
+                        <label for="email">Subscribe to Latest Offers</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                    </form>
+                    <p><strong>Jetwing Hotels Limited</strong><br>
+                        Jetwing House II, 46/26, Navam Mawatha, Colombo 02, Sri Lanka</p>
+                    <p>Telephone: +94 11 234 5700<br>
+                        Reservations: +94 11 470 9400<br>
+                        WhatsApp: +94 11 470 9400<br>
+                        Email: <a href="mailto:reservations@jetwinghotels.com">reservations@jetwinghotels.com</a></p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p>All Copyrights Reserved © Jetwing Hotels</p>
+                    <p>Concept & Design by <a href="#">Oshan Shanuka</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS for navigation toggle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-whneR2O2TEe6QTLZkPbGJ82klzqxJJ62cG6ULeDhhD9A+Y63E+WjJdA7OqXdMXXF" crossorigin="anonymous"></script>
+</body>
+</html>
