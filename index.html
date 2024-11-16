@@ -1,475 +1,646 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/images/WhatsApp Image 2024-10-14 at 17.20.13.jpeg">
-  <style>
-    /* Fullscreen background image */
-    .hero {
-        position: relative;
-        background-image: url('your-image-url.jpg'); /* Replace with your image path */
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/images/download.png">
+    <title>HomePage</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="/Css/body.css" />
+    <link rel="stylesheet" href="/Css/style.css" />
+    <link rel="stylesheet" href="/Css/main.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 bg-body-tertiary rounded sticky-md-top"
+    >
+      <div class="container-fluid">
+        <a
+          class="navbar-brand text-center text-primary fs-3 shadow-sm p-3 mb-1 bg-body-tertiary rounded align-middle fs-rem border-light border-opacity-25 border-2"
+          href="#"
+          ><img src="/assets/images/download.png" style="width: 220px; height: 60px;" alt=""></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul
+            class="navbar-nav shadow-sm p-1 mb-1 bg-body-tertiary rounded fs-6"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active text-primary icon-link icon-link-hover"
+                style="--bs-link-hover-color-black: #000"
+                aria-current="page"
+                href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="/pages/about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="/pages/service.html"
+                >Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="/pages/gallery.html"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="/pages/hotels.html"
+                >Hotels</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="/pages/contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Offcanvas Sidebar -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="/index.html"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/service.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/hotels.html">Hotels</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!--carousel-->
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="/assets/images/jetwing-jaffna-01.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/images/jetwing-jaffna-03.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/images/jetwing-jaffna-06.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <div class="booking_ocline">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="book_room">
+                <h1>Any Reservations</h1>
+                <form class="book_now">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <span>check-in</span>
+
+                      <input
+                        class="online_book"
+                        placeholder="dd/mm/yyyy"
+                        type="date"
+                        name="dd/mm/yyyy"
+                      />
+                    </div>
+                    <div class="col-md-12">
+                      <span>Check-out</span>
+
+                      <input
+                        class="online_book"
+                        placeholder="dd/mm/yyyy"
+                        type="date"
+                        name="dd/mm/yyyy"
+                      />
+                    </div>
+                    <div class="col-md-12">
+                      <button class="book_btn">Book Now</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <section
+      class="w-100 d-flex justify-content-center text-white p-5 mt-5"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url('/Assests/Images/backdrop2.jpg');
         background-size: cover;
         background-position: center;
-        height: 100vh; /* Full screen height */
-    }
+      "
+    >
+      <div class="row w-75">
+        <div class="col-12 col-md-6 align-content-center">
+          <img
+            src="/assets/images/Jetwing-Lake.jpg"
+            alt="review"
+            class="img-fluid"
+            width="150px"
+          />
+          <h3 class="text-primary fs-3">The stff Service is impeccable</h3>
+          <p> I recently had the pleasure of staying at [Hotel Name], and I
+            couldn't be more pleased with my experience. From the moment I
+            arrived, the staff made me feel welcome and took care of all my
+            needs with professionalism and warmth. The check-in process was
+            smooth and quick, and my room was spotlessly clean, spacious, and
+            tastefully decorated.</p>
+          <div class="d-flex align-items-center container">
+            <img
+              src="/assets/images/1-3-300x202.jpg"
+              alt="review"
+              width="60px"
+              height="60px"
+              style="border-radius: 30px"
+            />
+            <h6 class="text-primary fs-6">John doe</h6>
+          </div>
+        </div>
 
-    /* Overlay text positioning */
-    .hero-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        text-align: center;
-    }
-
-    /* Styling for the booking form at the bottom */
-    .booking-form {
-        background-color: rgba(255, 255, 255, 0.8);
-        padding-top: 20px;
-        border-radius: 10px;
-        max-width: 700px;
-        margin: auto;
-    }
-
-    /* Footer booking section positioning */
-    .booking-section {
-        padding-bottom: 100px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .info-section {
-        background-color: #333;
-        color: #fff;
-        padding: 40px 20px;
-        height: 70vh;
-    }
-
-    .info-section h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-    }
-
-    .info-section h1 span {
-        color: #e2c14e;
-    }
-
-    .info-section .stats {
-        display: flex;
-        gap: 30px;
-        margin-bottom: 20px;
-    }
-
-    .stat-item {
-        background-color: #666;
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-        font-size: 1.5rem;
-    }
-
-    .stat-item p {
-        margin: 0;
-        font-size: 0.9rem;
-    }
-
-    .info-section p {
-        margin-bottom: 20px;
-    }
-
-    .faq-link {
-        color: #e2c14e;
-        text-decoration: underline;
-    }
-
-    .map-section {
-        padding: 40px 20px;
-        background-color: #f8f9fa;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .map-image {
-        width: 100%;
-        max-width: 500px;
-        height: auto;
-    }
-
-    .gallery-card {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-        padding: 20px;
-    }
-
-    .main-heading {
-        text-align: center;
-        margin-top: 50px;
-        font-size: 2.5rem;
-        font-weight: bold;
-        letter-spacing: 0.05em;
-    }
-
-    .main-heading::before {
-        content: '';
-        display: block;
-        height: 5px;
-        width: 100px;
-        background-color: #f8b400;
-        margin: 10px auto;
-    }
-
-    .subheading {
-        text-align: center;
-        margin: 20px 0;
-        font-size: 1.25rem;
-        color: #666;
-    }
-
-    .icons-grid {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin-top: 40px;
-    }
-
-    .icon-item {
-        text-align: center;
-        width: 150px;
-    }
-
-    .icon-item img {
-        width: 60px;
-        height: auto;
-        margin-bottom: 15px;
-    }
-
-    .icon-item p {
-        font-weight: bold;
-        color: #333;
-    }
-
-    .explore-btn {
-        display: block;
-        text-align: center;
-        margin: 40px auto;
-    }
-
-    .explore-btn button {
-        padding: 10px 40px;
-        background-color: #f8b400;
-        border: none;
-        color: #fff;
-        font-size: 1.2rem;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    .explore-btn button:hover {
-        background-color: #d79500;
-    }
-
-    .illustration-section {
-        margin: 50px 0;
-        text-align: center;
-    }
-
-    .illustration-section img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Footer Styling */
-    .footer {
-       background-color: #f8f9fa;
-       padding-top: 40px;
-       padding-bottom: 20px;
-       border-top: 2px solid #dee2e6;
-    }
-
-    .footer .list-unstyled li {
-      margin-bottom: 10px;
-    }
-
-    .footer .list-unstyled li a {
-      color: #333;
-    }
-
-    .footer img {
-      max-width: 200px;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 992px) {
-        .info-section,
-        .map-section {
-            height: auto;
-            padding: 20px;
-        }
-
-        .gallery-card {
-            grid-template-columns: 1fr;
-            padding: 10px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .carousel-inner img {
-            height: auto;
-        }
-    }
-  </style>
-</head>
-<body>
-
-<!-- Navbar with Burger Menu -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-          <img src="/assets/images/download.png" alt="Logo" style="width: 240px; height: 50px;">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="/pages/hotels.html">Hotels</a></li>
-              <li class="nav-item"><a class="nav-link" href="/pages/dining.html">Dining</a></li>
-              <li class="nav-item"><a class="nav-link" href="/pages/gallery.html">Gallery</a></li>
-          </ul>
-      </div>
-  </div>
-</nav>
-
-<!-- Hero Section -->
-<div class="hero">
-  <div id="carouselExampleCaptions" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="active" aria-current="true" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/assets/images/jetwing-jaffna-01.jpg" class="d-block w-100" alt="..." width="100vw" height="630px">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Spend peace Here</h5>
-          <p>We giving memorable Treatment to our customers</p>
+        <div class="col-12 col-md-6 align-content-center">
+          <img
+            src="/assets/images/Jetwing-Lake.jpg"
+            alt="review"
+            class="img-fluid"
+            width="150px"
+          />
+          <h3 class="text-primary fs-3">The stff Service is impeccable</h3>
+          <p>
+            I recently had the pleasure of staying at [Hotel Name], and I
+            couldn't be more pleased with my experience. From the moment I
+            arrived, the staff made me feel welcome and took care of all my
+            needs with professionalism and warmth. The check-in process was
+            smooth and quick, and my room was spotlessly clean, spacious, and
+            tastefully decorated.
+          </p>
+          <div class="d-flex align-items-center container">
+            <img
+              src="/assets/images/1-3-300x202.jpg"
+              alt="review"
+              width="60px"
+              height="60px"
+              style="border-radius: 30px"
+            />
+            <h6 class="text-primary fs-6">Lorey evens</h6>
+          </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="/assets/images/jetwing-jaffna-03.jpg" class="d-block w-100" alt="..." width="100vw" height="600px">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Spend peace Here</h5>
-          <p>We giving memorable Treatment to our customers.</p>
+    </section>
+    <section id="offer">
+      <h1 class="fs-1">Browse by property type</h1>
+      <div id="offer-card" class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/assets/images/Jetwing Lighthouse.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h4 class="card-title">Jetwing LightHouse-Galle</h4>
+              <p class="card-text">
+                Jetwing Hotels offers luxurious stays across Sri Lanka, 
+                blending stunning locations, eco-friendly practices, and 
+                exceptional hospitality for a perfect getaway steeped in comfort and culture.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/assets/images/★★★★ Jetwing Jaffna, Jaffna, Sri Lanka.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Jetwing-Jaffna</h5>
+              <p class="card-text">
+                Jetwing Hotels offers luxurious stays across Sri Lanka, 
+                blending stunning locations, eco-friendly practices, and 
+                exceptional hospitality for a perfect getaway steeped in comfort and culture.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/assets/images/Jaffna Hotels _ Luxury Hotel _ Jetwing Jaffna _ Official Site.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Jetwing Colombo</h5>
+              <p class="card-text">
+                Jetwing Hotels offers luxurious stays across Sri Lanka, 
+                blending stunning locations, eco-friendly practices, and 
+                exceptional hospitality for a perfect getaway steeped in comfort and culture.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- 3cards -->
+    <div class="row">
+      <div class="col-sm-4 mb-3 mb-sm-0">
+        <div class="card bg-success text-white">
+          <div class="card-body">
+            <h5 class="card-title text-center">Special spa treatment</h5>
+            <p class="card-text">
+              With supporting text below as a natural lead-in to additional
+              content.
+            </p>
+            <a href="#" class="btn btn-outline-primary">Rate Us</a>
+          </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="/assets/images/jetwing-jaffna-06.jpg" class="d-block w-100" alt="..." width="100vw" height="600px">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Spend peace Here</h5>
-          <p>We giving memorable Treatment to our customers.</p>
+      <div class="col-sm-4">
+        <div class="card bg-danger text-white">
+          <div class="card-body">
+            <h5 class="card-title text-center">Special face treatment</h5>
+            <p class="card-text">
+              With supporting text below as a natural lead-in to additional
+              content.
+            </p>
+            <a href="#" class="btn btn-outline-primary">Rate Us</a>
+          </div>
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="/assets/images/Jetwing-Lake.jpg" class="d-block w-100" alt="..." width="100vw" height="600px">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Spend peace Here</h5>
-          <p>We giving memorable Treatment to our customers.</p>
+      <div class="col-sm-4">
+        <div class="card card bg-success text-white">
+          <div class="card-body">
+            <h5 class="card-title text-center">Special spa treatment</h5>
+            <p class="card-text">
+              With supporting text below as a natural lead-in to additional
+              content.
+            </p>
+            <a href="#" class="btn btn-outline-primary">Rate Us</a>
+          </div>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
+    <br />
 
-    <!-- Booking Form Section -->
-    <div class="booking-section">
-        <div class="booking-form shadow-lg p-3">
-            <form class="row g-3">
-                <div class="col-md-4">
-                    <label for="hotelSelect" class="form-label">Select Hotel</label>
-                    <select id="hotelSelect" class="form-select">
-                        <option selected>Select Hotel</option>
-                        <option value="1">Hotel 1</option>
-                        <option value="2">Hotel 2</option>
-                    </select>
-                </div>
-                <div class="col-md-3">
-                    <label for="checkIn" class="form-label">Check In</label>
-                    <input type="date" class="form-control" id="checkIn">
-                </div>
-                <div class="col-md-3">
-                    <label for="checkOut" class="form-label">Check Out</label>
-                    <input type="date" class="form-control" id="checkOut">
+    <!-- photos -->
+    <div class="container d-flex flex-wrap">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="/assets/images/sri-lanka-dining-desktop-large.jpg" class="img-fluid" alt="..." />
+        </div>
+      </div>
+      <section>
+        <div class="container-fluid pb-5" data-wow-delay="0.1s">
+          <div class="container">
+            <div class="bg-white shadow" style="padding: 35px">
+              <div class="row g-2">
+                <div class="col-md-10">
+                  <div class="row g-2">
+                    <div class="col-md-3">
+                      <div class="date" id="date1" data-target-input="nearest">
+                        <input
+                          type="text"
+                          class="form-control datetimepicker-input"
+                          placeholder="Check in"
+                          data-target="#date1"
+                          data-toggle="datetimepicker"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="date" id="date2" data-target-input="nearest">
+                        <input
+                          type="text"
+                          class="form-control datetimepicker-input"
+                          placeholder="Check out"
+                          data-target="#date2"
+                          data-toggle="datetimepicker"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <select class="form-select">
+                        <option selected>Adult</option>
+                        <option value="1">Adult 1</option>
+                        <option value="2">Adult 2</option>
+                        <option value="3">Adult 3</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                      <select class="form-select">
+                        <option selected>Child</option>
+                        <option value="1">Child 1</option>
+                        <option value="2">Child 2</option>
+                        <option value="3">Child 3</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
                 <div class="col-md-2">
-                    <label for="guests" class="form-label">Guests</label>
-                    <input type="number" class="form-control" id="guests" min="1" value="1">
+                  <button
+                    class="btn btn-primary w-100"
+                    style="border-radius: 0"
+                  >
+                    Submit
+                  </button>
                 </div>
-                <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary w-100">Check Availability</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-
-
-  <!-- Left Info Section -->
-   <div class="content-wrapper">
-  <div class="info-section col-lg-6">
-      <h1>MAKE YOURSELF <br><span>AT HOME</span></h1>
-      <div class="stats">
-          <div class="stat-item">
-              <h2>16</h2>
-              <p>DESTINATIONS</p>
+              </div>
+            </div>
           </div>
-          <div class="stat-item">
-              <h2>30</h2>
-              <p>LUXURY PROPERTIES</p>
-          </div>
-      </div>
-      <p>We are a small island with big hearts. Wherever you may find yourself in Sri Lanka, rest easy knowing that an open door is never too far away.</p>
-      <a href="#" class="faq-link">Frequently Asked Questions ></a>
-  </div>
-
-  <!-- Right Map Section -->
-  <div class="map-section col-lg-6">
-      <img src="/assets/images/jetwinghotels-map-desktop-v2.jpg" alt="Map of Sri Lanka" class="map-image">
-  </div>
-</div>
-
-<div class="gallery-card">
-    <div class="card" style="width: 20rem;">
-        <img src="/assets/images/jetwing-jaffna-03.jpg" class="card-img-top" alt="jetwing" style="width: 100%; height: 100%;">
-        <div class="card-body">
-          <h5 class="card-title">Jetwing Jaffna</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="/pages/gallery.html" class="btn btn-primary">See more</a>
         </div>
-    </div>
-    <div class="card" style="width: 20rem;">
-      <img src="/assets/images/Gallery-h1-4-300x200.jpg" class="card-img-top" alt="jetwing" style="width: 100%; height: 100%;">
-      <div class="card-body">
-        <h5 class="card-title">Jetwing Colombo</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="/pages/gallery.html" class="btn btn-primary">See more</a>
+      </section>
+      <div class="row">
+        <div class="col-md-12">
+          <img
+            src="/assets/images/photo-gallery-desktop-large.jpg"
+            class="img-fluid"
+            alt="..."
+          />
+        </div>
       </div>
-  </div><div class="card" style="width: 20rem;">
-    <img src="/assets/images/Hotel-Gallery-900x607-1-1-300x202.jpg" class="card-img-top" alt="jetwing" style="width: 100%; height: 100%;">
-    <div class="card-body">
-      <h5 class="card-title">Jetwing LightHouse</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="/pages/gallery.html" class="btn btn-primary">See more</a>
-    </div>
-</div>
-</div>
-
- <!-- Main Heading -->
-<section class="heading-section">
-  <h1 class="main-heading">SUSTAINABLE TOURISM IS AT OUR CORE</h1>
-  <p class="subheading">A responsible harmony of community and environment</p>
-</section>
-
-<!-- Icons Grid Section -->
-<section class="icons-grid">
-  <div class="icon-item">
-      <img src="/assets/images/🌿 Exciting News! 🌿 JP Carpet Cleaning is taking….jpg" alt="Water and Waste" style="width: 100px; height: 100px;">
-      <p>Water and Waste</p>
-  </div>
-  <div class="icon-item">
-      <img src="/assets/images/Aemetis_ A Renewable Biofuels Company At A Reasonable Price (NASDAQ_AMTX).jpg" alt="Biodiversity" style="width: 100px; height: 100px;">
-      <p>Biodiversity</p>
-  </div>
-  <div class="icon-item">
-      <img src="/assets/images/Download Eco Green Technology Icon Set for free.jpg" alt="Community and Culture" style="width: 100px; height: 100px;">
-      <p>Community and Culture</p>
-  </div>
-  <div class="icon-item">
-      <img src="/assets/images/52b7b43b-b574-4da3-85b0-75ab2010007c.jpg" alt="Family" style="width: 100px; height: 100px;">
-      <p>Family</p>
-  </div>
-  <div class="icon-item">
-      <img src="/assets/images/Download green herbal logo template herbal 100 for free.jpg" alt="Sourcing and Production" style="width: 100px; height: 100px;">
-      <p>Sourcing and Production</p>
-  </div>
-</section>
-
-<!-- Explore Button -->
-<section class="explore-btn">
-  <button>EXPLORE</button>
-</section>
-
-<!-- Illustration Section -->
-<section class="illustration-section">
-  <img src="/assets/images/responsible-tourism-2.jpg" alt="Architectural Illustration">
-</section>
- <!-- Footer Section -->
- <footer class="footer mt-5 pt-5">
-  <div class="container">
-    <div class="row">
-      <!-- Left Column -->
-      <div class="col-md-6">
-        <img src="/assets/images/download.png" alt="Jetwing Hotels Logo" class="mb-3">
-        <form class="subscribe-form mb-3">
-          <label for="email">Subscribe to Latest Offers</label>
-          <input type="email" id="email" class="form-control" placeholder="Enter your email">
-          <button type="submit" class="btn btn-primary mt-2">Submit</button>
-        </form>
-        <p><strong>Jetwing Hotels Limited</strong><br>
-          Jetwing House II, 46/26, Navam Mawatha, Colombo 02, Sri Lanka</p>
-        <p>Telephone: +94 11 234 5700<br>
-          Reservations: +94 11 470 9400<br>
-          WhatsApp: +94 11 470 9400<br>
-          Email: <a href="mailto:reservations@jetwinghotels.com">reservations@jetwinghotels.com</a></p>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card bg-dark text-white">
+              <div class="card-body">
+                <h5 class="card-title">Customer 1</h5>
+                <p class="card-text">
+                  This is a great product! Highly recommend.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card card bg-secondary text-white">
+              <div class="card-body">
+                <h5 class="card-title">Customer 2</h5>
+                <p class="card-text">Excellent service and quality.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card card bg-dark text-white">
+              <div class="card-body">
+                <h5 class="card-title">Customer 3</h5>
+                <p class="card-text">I am very satisfied with my purchase.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card card bg-secondary text-white">
+              <div class="card-body">
+                <h5 class="card-title">Customer 4</h5>
+                <p class="card-text">Great value for the price and best refreshments</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <br />
+      <br />
+      <br />
       
-      <!-- Right Column -->
-      <div class="col-md-6">
-        <ul class="list-unstyled">
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Sitemap</a></li>
-        </ul>
-        <div class="social-media">
-          <a class="me-3" href="https://web.facebook.com/jetwinghotels/?_rdc=1&_rdr">
-            <img src="/assets/images/facebook.jpg" alt="" width="75px" height="75px">
-          </a>
-          <a class="me-3" href="https://www.youtube.com/user/jetwinghotels">
-            <img src="/assets/images/YouTube App Icon.jpg" alt="" width="75px" height="75px">
-          </a>
-          <a class="me-3" href="https://www.instagram.com/jetwinghotels/?ref=badge">
-            <img src="/assets/images/Instagram App Icon.jpg" alt="" width="75px" height="75px">
-          </a>
+      <section
+        class="w-100 d-flex flex-column align-content-center text-white p-5"
+        style="
+          background-image: linear-gradient(
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url('/images/backdrop.jpg');
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h1 class="w-75">
+                Savor the present, indulge in our rejuvenating spa services.
+              </h1>
+            </div>
+            <div class="col-12 col-md-6 mt-md-0 mt-5">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed
+                corporis dignissimos voluptas id quaerat iure dolores qui odio
+                labore nulla minima, facere similique placeat? Sed odit modi
+                consectetur temporibus vitae incidunt maxime aperiam veniam!
+                Animi dolorum unde illo sequi possimus praesentium, maxime ipsam
+                nihil, quibusdam, suscipit quasi distinctio nemo voluptatem!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="row">
+        <div class="col-md-12">
+          <img src="/assets/images/responsible-tourism-2.jpg" class="img-fluid" alt="..." />
         </div>
       </div>
     </div>
-    <div class="row mt-4">
-      <div class="col text-center">
-        <p>All Copyrights Reserved © Jetwing Hotels</p>
-        <p>Concept & Design by <a href="#">Oshan shanuka</a></p>
-      </div>
-    </div>
-  </div>
-</footer>
+    <br />
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- footer -->
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <h3>Contact US</h3>
+              <ul class="conta">
+                <li>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  Jetwing LightHouse-Galle road,Galle
+                </br>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  Jetwing Yala- Palatupana, Yala
+                </br>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  Jetwing Colombo-Victoria MW, Colombo 03
+                </br>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  Jetwing-Jaffna-church road, Jaffna
+                </li>
+                <li>
+                  <i class="fa fa-phone" aria-hidden="true"></i> Call us- +94112234567
+                </li>
+                <li>
+                  <i class="fa fa-envelope" aria-hidden="true"></i
+                  ><a href="#"> JetwingHotels@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3>Menu Link</h3>
+              <ul class="link_menu">
+                <li class="active"><a href="/index.html">Home</a></li>
+                <li><a href="/Pages/about.html"> About</a></li>
+                <li><a href="/Pages/service.html">Services</a></li>
+                <li><a href="/Pages/gallery.html">Gallery</a></li>
+                <li><a href="/Pages/hotels.html">Branches</a></li>
+                <li><a href="/Pages/contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h3>News letter</h3>
+              <form class="bottom_form">
+                <input
+                  class="enter"
+                  placeholder="Enter your email"
+                  type="text"
+                  name="Enter your email"
+                />
+                <button class="sub_btn">subscribe</button>
+              </form>
+              <ul class="social_icon">
+                <li>
+                  <a
+                    href="https://web.facebook.com/jetwinghotels/?_rdc=1&_rdr#"
+                    target="_blank"
+                    ><i class="fa-brands fa-facebook" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/jetwinghotels/?hl=en"
+                    target="_blank"
+                    ><i class="fa-brands fa-instagram" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/user/jetwinghotels" target="_blank"
+                    ><i class="fa-brands fa-youtube" aria-hidden="true"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
+                <p>
+                  © 2019 All Rights Reserved. Design by
+                  <a href="https://www.jetwinghotels.com/#gref">
+                    Jetwing Companies</a
+                  >
+                  <br /><br />
+                  Distributed by
+                  <a
+                    href="https://www.jetwinghotels.com/#gref"
+                    target="_blank"
+                    >Jetwing Technologies</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
